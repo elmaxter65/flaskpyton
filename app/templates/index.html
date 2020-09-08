@@ -1,0 +1,11 @@
+<!-- extend base layout -->
+{% extends "base.html" %}
+
+{% block content %}
+    <h1>Hola, {{ user.usuario }}!</h1>
+    {% for post in posts %}
+    <p>
+      {{ post.autor.usuario }} dice: <b>{{ post.asunto }}</b>
+    </p>
+    {% endfor %}
+{% endblock %}
